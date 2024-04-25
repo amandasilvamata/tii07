@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média exercício 2</title>
+    <script>
+        /* Após receber o nome a matéria e as notas dos 4 bimestres de um aluno,
+        calcule a sua média final. imprima o resultado deste aluno.
+        
+        media > 10 ou < 0 - média final inválida
+        media >= 7 - aprovado
+        media >= 6.5 - conselho
+        media >= 4 - recuperação
+        media <4 - reprovado
+        No final solte um alerta com nome, matéria, média final e o resultado
+        */ 
+
+        let nome, materia, i, nota, mediaF, resp, repete;
+ do{
+        nome = prompt("Digite o nome do aluno: ");
+        materia = prompt("Digite a matéria: ");
+
+
+
+        mediaF = 0
+        for(i=1; i<=4; i++){
+        nota = Number(prompt("Digite a nota do " + i + "º bimestre"))
+        while(nota < 0 || nota > 10){
+                alert("Digite uma nota válida! A nota precisa estar entre 0 e 10.")
+                nota = parseFloat(prompt("Digite a nota do " + i + "º bimestre"))
+        }
+            mediaF = mediaF + nota
+    }
+
+        mediaF = mediaF/4;
+
+        if(mediaF < 0 || mediaF > 10){
+            resp = "média final inválida!"
+        }else if (mediaF >= 7){
+            resp = "aprovado"
+        }else if (mediaF>= 6.5){
+            resp = "conselho"
+        }else if (mediaF >= 4){
+            resp = "recuperação"
+        }else {
+            resp = "reprovado"
+        }
+
+        alert("O aluno " + nome + " na matéria de " + materia + " teve a média final de " + mediaF + " . Portanto, está " + resp);
+
+        repete = (prompt("Deseja refazer o cálculo da média final para outro aluno? Digite 1 para sim e 2 para não"))
+}while (repete == 1)
+
+    alert("Fim do programa");
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

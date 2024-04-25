@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média exercício</title>
+    <script>
+    /* crie um programa que após a entrada do nome, materia, notas, avaliação 1, trabalho e avaliação 2,
+    calcule a média para este bimestre. no final solte um alerta com nome, matéria e média do bimestre..
+    */
+    let nome, materia, avaliacao1, avaliacao2, trabalho, media; //let é usado no lugar de var e tem o mesmo valor que variável
+
+    nome = prompt("Digite o nome do aluno: ");
+    materia = prompt("Digite a matéria: ");
+    avaliacao1 = parseFloat(prompt("Digite a nota da 1ª avaliação: "));
+    trabalho = parseFloat(prompt("Digite a nota do trabalho: "));
+    avaliacao2 = parseFloat(prompt("Digite a nota da 2ª avaliação: "));
+
+    media = parseFloat((avaliacao1+trabalho+avaliacao2)/3) //parseFloat é facultativo neste caso já que a entrada já foi como número real
+
+    alert("O aluno " + nome + " na matéria " + materia + " teve a média " + media);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

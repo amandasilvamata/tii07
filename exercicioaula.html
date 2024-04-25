@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       // let  animal, race, old, color, size, name, tutorName, tutorPhone, tutorAdress;
+        let resp
+        let i=0
+        let controlL = 0
+        let controlC = 0
+        vetor = ['qual o seu animal de estimação: ', 'a raça do animal: ', 'a idade do animal: ', 'a cor do animal: ', 'o tamanho do animal: ', 'o nome do animal : ', 'o seu nome: ', 'o seu telefone: ' , 'o seu endereço: ']
+
+
+        alert("Welcome to the Pet's Care! ")
+        
+        let petsCare = new Array(6,9) // [0][0] já preenchida ou (0,0)
+     
+       
+        
+        petsCare[controlL,0] = "Animal" //atribuição
+        petsCare[controlL,1] = "Raça" //atribuição
+        petsCare[controlL,2] = "Idade" //atribuição
+        petsCare[controlL,3] = "Cor" //atribuição
+        petsCare[controlL,4] = "Tamanho" //atribuição
+        petsCare[controlL,5] = "Nome do animal" //atribuição
+        petsCare[controlL,6] = "Nome do tutor" //atribuição
+        petsCare[controlL,7] = "Telefone do tutor" //atribuição
+        petsCare[controlL,8] = "Endereço do tutor " //atribuição
+        
+            
+        /*
+        console.log(petsCare[controlL,8]) 
+        /*for(i=0; i<=8; i++); &&; for (control=1; control<=5; control++){
+           petsCare[control] = prompt('Digite ' + vetor[i])
+        }
+        */
+        controlL = 1
+
+    do{
+        i=0
+        controlC= 0
+        
+
+        do{
+            petsCare[1,controlC] = prompt('Digite ' + vetor[i])
+
+            console.log(petsCare[1,controlC]) 
+            i++
+            
+            controlC++
+            
+        }while((i<=8))//&&(control<=5))
+
+        resp = prompt('Deseja cadastrar outro pet? 0-sim, 1-não')
+
+        while((resp < 0 || resp > 1)&&(resp < 1 )){
+            resp = prompt('Deseja cadastrar outro pet? 0-sim, 1-não')
+        }
+        controlL++
+
+    }while(resp == 0)
+   
+/*
+        console.log(
+            petsCare[0][0]+
+            petsCare[1][0]
+            )
+            */
+        document.write(
+            document.write(
+            petsCare[0,0]+ '<br>' +
+            petsCare[0,1]+ '<br>' +
+            petsCare[0,2]))
+        document.write(
+            petsCare[1,0]+ '<br>' +
+            petsCare[1,1]+ '<br>' +
+            petsCare[1,2])
+            
+    </script>
+</body>
+</html>

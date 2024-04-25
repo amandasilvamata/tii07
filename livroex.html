@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantidade de faltas</title>
+    <script>
+        let matr, faltas,totF, i;
+
+
+        let disciplinas = ["física", "matemática", "biologia"]
+
+        i = 1;
+        totF = 0;
+        faltas = 0;
+
+        matr = parseInt(prompt("Digite o número de matrícula do aluno: "));
+
+        for(i=0; i <=2;i++){
+
+            faltas = Number(prompt("Digite o total de faltas do aluno na disciplina " + disciplinas[i]))
+
+            totF = totF + faltas  
+        }
+        alert(`O aluno com número de matrícula ${matr} tem ${totF} faltas no boletim`);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

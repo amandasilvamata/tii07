@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando matrizes</title>
+    <script>
+        /* Matriz Base */
+
+        var arrayBidimensional = [
+            [1,2,3],
+            [4,5,6],
+            [7,8,9]
+        ]
+
+        console.log(arrayBidimensional)
+        console.log(arrayBidimensional[1][1])
+
+        let arrayBidDados = []
+
+        arrayBidDados [0] = ['Gustavo', 'masc', 22]
+        arrayBidDados [1] = ['Helena', 'femi', 20 ]
+
+        console.log(arrayBidDados)
+        console.log(arrayBidDados [1][0])
+
+       /* cadastrar os dados de uma pessoa da agenda*/
+       
+       let dados = ['nome', 'data nascimento', 'whatsapp', 'email', 'signo'] //Vetor
+       let agenda = [] //matriz
+       let i = 0
+
+       do{
+          agenda[i] = [
+            prompt('Digite ' + dados[0]),
+            prompt('Digite ' + dados[1]),
+            prompt('Digite ' + dados[2]),
+            prompt('Digite ' + dados[3]),
+            prompt('Digite ' + dados[4])
+
+        ]
+        i++ //controla a linha da matriz
+           resp = parseInt(prompt('Cadastrar outra pessoa: \n(1)- sim. \n (2)- não.'))
+       }while( resp == 1)
+
+       console.log(agenda)
+       //matriz de cadastrar na agenda
+
+       for(l=0;l<agenda.length;l++){
+            document.white(
+                agenda[l][0] + '|' +
+                agenda[l][1] + '|' + 
+                agenda[l][2] + '|' +
+                agenda[l][3] + '|' +
+                agenda[l][4] + '| <br>' 
+            )
+       }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

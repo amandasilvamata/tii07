@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média exercício 2</title>
+    <script>
+        /* Após receber o nome a matéria e as notas dos 4 bimestres de um aluno,
+        calcule a sua média final. imprima o resultado deste aluno.
+        
+        media > 10 ou < 0 - média final inválida
+        media >= 7 - aprovado
+        media >= 6.5 - conselho
+        media >= 4 - recuperação
+        media <4 - reprovado
+        No final solte um alerta com nome, matéria, média final e o resultado
+        */ 
+
+        let nome, materia, nota1, nota2, nota3, nota4, mediaF, resp;
+
+        nome = prompt("Digite o nome do aluno: ");
+        materia = prompt("Digite a matéria: ");
+        nota1 = parseFloat(prompt("Digite a nota do 1º bimestre: "));
+        nota2 = parseFloat(prompt("Digite a nota do 2º bimestre: "));
+        nota3 = parseFloat(prompt("Digite a nota do 3º bimestre: "));
+        nota4 = parseFloat(prompt("Digite a nota do 4º bimestre: "));
+
+        mediaF = ((nota1 + nota2 + nota3 + nota4)/4);
+        /*
+        if (mediaF > 10){
+            resp = "média final inválida!" 
+        }else if (mediaF < 0){*/
+        if(mediaF < 0 || mediaF > 10){
+            resp = "média final inválida!"
+        }else if (mediaF >= 7){
+            resp = "aprovado"
+        }else if (mediaF>= 6.5){
+            resp = "conselho"
+        }else if (mediaF >= 4){
+            resp = "recuperação"
+        }else {
+            resp = "reprovado"
+        }
+
+        alert("O aluno " + nome + " na matéria de " + materia + " teve a média final de " + mediaF + " . Portanto, está " + resp);
+
+// OUTRA FORMA DE RESOLVER      
+/*        if((nota1 < 0 || nota1 > 10) || (nota2 < 0 || nota2 > 10) || (nota3 < 0 || nota3 > 10) || (nota4 < 0 || nota4 > 10)){
+            alert("Uma ou mais de uma nota bimestral está inválida" + "\n noa maior que 0 ou maior que 10!")
+        }else{
+
+            mediaF = ((nota1 + nota2 + nota3 + nota4)/4)
+
+        }if (mediaF >= 7){
+            resp = "aprovado"
+        }else if (mediaF>= 6.5){
+            resp = "conselho"
+        }else if (mediaF >= 4){
+            resp = "recuperação"
+        }else {
+            resp = "reprovado"
+        }
+*/        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

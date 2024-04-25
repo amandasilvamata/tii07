@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 040 - JS</title>
+</head>
+<!-- Trabalhar vetores e matrizes -->
+<script>
+    // Criando um vetor
+    let alunos = ["Fábio", "Dias", "Pablo", "Rodrigo" ]
+
+    console.log(alunos[2])
+
+    let quantidades = [12, 33, 11, 17]
+
+    console.log(quantidades[0])
+
+    console.log(alunos[0] + " " + quantidades[3])
+
+    let vetor = new Array(3)
+
+    vetor[0] = prompt("Digite um modelo de carro: ")
+
+    console.log(vetor[0])
+
+    for(let i = 0; i<=3; i++){
+        vetor[i] = prompt("Digite um modelo de carro: ")
+    }
+
+    for(let i = 0; i<=2;i++){
+        console.log(vetor[i])
+    }
+
+    let frutas = []
+
+    frutas.push("Banana", "Manga", "Abacaxi", "Tomate", "Abacaxi")
+
+    frutas[5] ="Pêssego"
+
+    for(let i=0; i<= (frutas.length - 1);i++){
+    console.log(frutas[4])
+    }
+
+    //Para pegar a quantidade de indices do vetor
+    console.log(frutas.length) //7
+
+    // Criando uma matriz
+
+    let carrosAcessorios = [
+        ["fusca", "palio", "fiesta"],
+        ["banco de couro", "banco na cor marrom", "banco flanelado"],
+        ["trio eletrico", "trava nas 4 portas", "trio eletrico"]
+        
+    ]
+    // primeiro valor percorre a linha
+    // segundo valor pecorre a coluna
+
+    console.log(
+        carrosAcessorios[0][0] + " | " +
+        carrosAcessorios[1][0] + " | " +
+        carrosAcessorios[2][0] 
+    ) // fusca | palio | fiesta
+
+    let feira = new Array(3,4)
+
+    feira[0,0] = "banana" //atribuição
+
+    console.log(feira[0,0]) // [0][0] imprime apenas o caracter "B"
+    feira[0,1] = parseInt(prompt("Digite a quantidade de " + feira[0,0]))
+
+    console.log(feira[0,1])
+
+    //Criando matriz tipo objeto
+    let celular = {
+        cor: "Azul",
+        marca: "Xioami",
+        modelo: "Note",
+        biometria: true, // Verdadeiro | false Falso
+        largura: 3,
+        altura: 8
+    }
+
+    celular.modelo = "POCCO"
+
+    console.log(celular.modelo)
+    console.log(celular)
+
+</script>
+<body>
+    
+</body>
+</html>
